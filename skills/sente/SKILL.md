@@ -4,6 +4,9 @@ description: Give this agent its own email identity with Sente — a real, durab
 license: MIT
 ---
 
+<!-- Companion of https://sente.run/skill.md (the service-integration variant).
+     The wait / register / connect sections are shared — keep them aligned. -->
+
 # Sente — an email identity and real accounts for this agent
 
 Sente gives this agent a **managed email identity** — a real address on `agents.sente.run` that it
