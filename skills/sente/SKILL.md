@@ -1,6 +1,6 @@
 ---
 name: sente
-description: Give this agent its own email identity with Sente — a real, durable address it owns (name@agents.sente.run) plus the accounts layer on top. Send and receive mail as the agent; block on verification emails and get just the OTP code or magic link (sente wait --otp); register new accounts at third-party apps with a real browser (autonomous or confirm-before-submit); or connect accounts the user already owns (credentials vaulted write-only, authenticator/TOTP re-login, revocable). Use when an agent needs its own email address or inbox, is stuck at "check your email to continue," needs a verification code or magic link extracted, or must sign up / sign in to a web app and keep that account alive.
+description: Give this agent its own email identity with Sente — a real, durable address it owns (name@sente.run) plus the accounts layer on top. Send and receive mail as the agent; block on verification emails and get just the OTP code or magic link (sente wait --otp); register new accounts at third-party apps with a real browser (autonomous or confirm-before-submit); or connect accounts the user already owns (credentials vaulted write-only, authenticator/TOTP re-login, revocable). Use when an agent needs its own email address or inbox, is stuck at "check your email to continue," needs a verification code or magic link extracted, or must sign up / sign in to a web app and keep that account alive.
 license: MIT
 ---
 
@@ -9,7 +9,7 @@ license: MIT
 
 # Sente — an email identity and real accounts for this agent
 
-Sente gives this agent a **managed email identity** — a real address on `agents.sente.run` that it
+Sente gives this agent a **managed email identity** — a real address on `sente.run` that it
 owns — and uses it to get the agent **working accounts** at web apps: it can wait on verification
 emails (OTP / magic link, extracted server-side), register new accounts via a real remote browser,
 or connect accounts the user already owns. Credentials are vaulted; accounts stay re-loginable.
@@ -33,7 +33,7 @@ or connect accounts the user already owns. Credentials are vaulted; accounts sta
    ```bash
    sente identity create --name "<this agent's name>"
    ```
-   Returns `{ id, email }`, e.g. `my-agent@agents.sente.run` (`--local-part` to choose the address).
+   Returns `{ id, email }`, e.g. `my-agent@sente.run` (`--local-part` to choose the address).
 4. **Persist the credentials** where this agent's environment lives, without echoing the secret:
    ```bash
    echo "SENTE_API_TOKEN=$(sente token)" >> <env file>
